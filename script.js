@@ -9,6 +9,8 @@ let numcodEl = document.getElementById("num-cod");
 let numSalmonEl = document.getElementById("num-salmon");
 let numTropicalEl = document.getElementById("num-tropical");
 let numPufferEl = document.getElementById("num-puffer");
+let plus5btn = document.getElementById("plus5");
+let until200btn = document.getElementById("until200");
 
 // Global
 let character = "Steve";
@@ -22,6 +24,8 @@ villageImgEl.addEventListener("click", selectVillager);
 steveImgEl.addEventListener("click", selectsteve);
 alexImgEl.addEventListener("click", selectAlex);
 fishBtnEl.addEventListener("click", fishOnce);
+plus5btn.addEventListener("click", plus5);
+until200btn.addEventListener("click", until200);
 
 // Event
 function selectsteve() {
@@ -124,4 +128,15 @@ function fishOnce() {
     imgResultEl.src = "img/Pufferfish.png";
     numPufferEl.innerHTML = numPuffer;
   }
+}
+
+function plus5() {
+  for (let n = 1; n <= 5; n++) {
+    console.log(n);
+    fishOnce();
+  }
+}
+
+function until200 () {
+  while 
 }
