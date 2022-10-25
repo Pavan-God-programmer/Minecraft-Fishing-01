@@ -14,7 +14,7 @@ let until200btn = document.getElementById("until200");
 
 // Global
 let character = "Steve";
-let numcod = 0;
+let numCod = 0;
 let numSalmon = 0;
 let numTropical = 0;
 let numPuffer = 0;
@@ -67,9 +67,9 @@ function fishOnce() {
     console.log(randNum);
 
     if (randNum < 0.7) {
-      numcod++;
+      numCod++;
       imgResultEl.src = "img/Raw-Cod.png";
-      numcodEl.innerHTML = numcod;
+      numcodEl.innerHTML = numCod;
     } else if (randNum < 0.9) {
       numSalmon++;
       imgResultEl.src = "img/Raw-Salmon.png";
@@ -90,9 +90,9 @@ function fishOnce() {
     console.log(randNum);
 
     if (randNum < 0.1) {
-      numcod++;
+      numCod++;
       imgResultEl.src = "img/Raw-Cod.png";
-      numcodEl.innerHTML = numcod;
+      numcodEl.innerHTML = numCod;
     } else if (randNum < 0.2) {
       numSalmon++;
       imgResultEl.src = "img/Raw-Salmon.png";
@@ -112,9 +112,9 @@ function fishOnce() {
   console.log(randNum);
 
   if (randNum < 0.1) {
-    numcod++;
+    numCod++;
     imgResultEl.src = "img/Raw-Cod.png";
-    numcodEl.innerHTML = numcod;
+    numcodEl.innerHTML = numCod;
   } else if (randNum < 0.1) {
     numSalmon++;
     imgResultEl.src = "img/Raw-Salmon.png";
@@ -137,6 +137,12 @@ function plus5() {
   }
 }
 
-function until200 () {
-  while 
+function until200() {
+  let codTraget = numCod + 200;
+  let count = 0;
+  while (numCod < codTraget) {
+    fishOnce();
+    count++;
+  }
+  console.log(count);
 }
